@@ -1,0 +1,232 @@
+:root{
+--Blue: hsl(246, 80%, 60%);
+--Light-red: hsl(15, 100%, 70%);
+---Soft-blue: hsl(195, 74%, 62%);
+--Light-red: hsl(348, 100%, 68%);
+--Lime-green: hsl(145, 58%, 55%);
+--Viole: hsl(264, 64%, 52%);
+--Soft-orange: hsl(43, 84%, 65%);
+--Very-dark-blue: hsl(226, 43%, 10%);
+--Dark-blue: hsl(235, 46%, 20%);
+--Desaturated-blue: hsl(235, 45%, 61%);
+--Pale-Blue: hsl(236, 100%, 87%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--Very-dark-blue);
+    color:#ffff;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 100px auto;
+    width: 375px;
+}
+
+.card-avatar-top{
+    background-color: var(--Blue);
+    padding: 30px;
+    display: flex;
+    gap: 20px;
+    position: relative;
+    bottom: -7px;
+    border-radius: 15px;
+}
+
+.card-avatar-top img{
+    width: 60px;
+    height: 60px;
+
+    border: 2px solid #ffff;
+    border-radius: 50%;
+}
+
+.card-avatar-top span{
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.card-avatar-top h1{
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.card-avatar-bottom{
+    background-color: var(--Dark-blue);
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 30px 20px 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.card-avatar-bottom button{
+   
+    background: none;
+    border: none;
+    color: var(--Pale-Blue);
+}
+
+.card-avatar-bottom .start{
+    color: #fff;
+}
+
+.time-tracker{
+    display: grid;
+    gap: 15px;
+}
+
+.time-tracker-top{
+    position: relative;
+    text-align: right;
+    height: 40px;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.work-top{
+    background-color: hsl(15, 100%, 70%);
+}
+
+.play-top{
+    background-color: var(---Soft-blue);
+}
+
+.study-top{
+    background-color: var(--Light-red);
+}
+
+.excersise-top{
+    background-color: var(--Lime-green);
+}
+
+.social-top{
+    background-color: var(--Viole);
+}
+
+.self-care-top{
+    background-color: var(--Soft-orange);
+}
+
+.time-tracker-top img{
+    width: 70px;
+}
+
+.time-tracker-bottom{
+
+    background-color: var(--Dark-blue);
+    padding: 20px;
+    display: grid;
+    gap: 10px;
+    border-radius: 8px;
+    position: relative;
+    top: -10px;
+    
+}
+
+.time-tracker-bottom header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.time-tracker-bottom header span{
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.time-tracker-bottom header button{
+    border: none;
+    background: none;
+}
+
+.time-tracker-bottom .time{
+    display: flex;
+    justify-content: space-between;
+}
+
+.time-tracker-bottom .time h2{
+    font-weight: 100;
+}
+
+.time-tracker-bottom .time p{
+    font-size: 15px;
+    color: var(--Pale-Blue);
+}
+
+@media(min-width:1200px) {
+    .container{
+        width: 880px;
+        flex-direction: row;
+    }
+
+    .card{
+        width: 180px;
+        
+    }
+
+    .card-avatar-top{
+        flex-direction: column;
+        padding: 20px;
+       
+    }
+
+    .card-avatar-top h1{
+        font-size: 25px;
+        font-weight: 100;
+        margin-bottom: 50px;
+    }
+
+    .card-avatar-bottom{
+        flex-direction: column;
+        align-items: start;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .card-avatar-bottom button:hover{
+        cursor: pointer;
+        color: #ffff;
+    }
+
+    .time-tracker{
+        grid-template-columns: repeat(3, 1fr);
+        margin: 10px;
+    }
+
+    .tracker{
+        width: 200px;
+        margin: 0;
+    }
+
+    .time-tracker-bottom{
+        gap: 20px;
+    }
+
+    .time-tracker-bottom header button img:hover{
+        cursor: pointer;
+        filter: brightness(0) invert(1);
+    }
+
+    .time-tracker-bottom:hover{
+        cursor: pointer;
+        background-color: hsl(235, 54%, 35%);
+    }
+
+    .time-tracker-bottom h2{
+        font-size: 40px;
+    }
+
+    .time-tracker-bottom .time{
+        flex-direction: column;
+    }
+}
